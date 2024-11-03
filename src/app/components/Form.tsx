@@ -29,8 +29,8 @@ function Form() {
         date,
       });
       localStorage.setItem("userID", result);
+      router.push("/fakedate");
     }
-    router.push("/fakedate");
   }
   return (
     <div className="border-2 flex flex-col justify-center items-center gap-8 bg-blue-100  h-full w-full">
@@ -40,8 +40,12 @@ function Form() {
           <Input placeholder={plc} name={plc} key={plc} />
         ))}
         <input type="date" name="date" className="border-2" />
-
-        <Button type="submit">Create</Button>
+        <div className="flex flex-col gap-2">
+          <Button type="submit">Create</Button>
+          <span className="text-xs self-center text-blue-500">
+            *Please fill in all fields.
+          </span>
+        </div>
       </form>
     </div>
   );
