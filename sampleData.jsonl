@@ -1,0 +1,28 @@
+[{
+
+    "name":"citrus",
+"date":"",
+"school":"A",
+"class": "A",
+"inFight": false,
+"status" : "waiting"
+},
+
+{
+    "name":"m",
+"date":"",
+"school":"A",
+"class": "A",
+"inFight": false,
+"status" : "waiting"
+},
+
+{
+    "name":"chaos",
+"date":"",
+"school":"B",
+"class": "B",
+"inFight": false,
+"status" : "waiting"
+}
+]
