@@ -3,7 +3,7 @@ import React, {useState, useEffect} from "react";
 import Image from "next/image";
 import {Button} from "@/components/ui/button";
 import Link from "next/link";
-function page() {
+function FakeDate() {
   const [bgStyle, setBgStyle] = useState("blue");
   const [agree, setAgree] = useState(false);
   useEffect(() => {
@@ -30,8 +30,8 @@ function page() {
     bgStyle === "blue"
       ? "bg-blue-200"
       : bgStyle === "gif"
-      ? "bg-glitch"
-      : "bg-black";
+        ? "bg-glitch"
+        : "bg-black";
   console.log(bg, "bg");
   return (
     <div
@@ -83,4 +83,4 @@ function page() {
   );
 }
 
-export default page;
+export default FakeDate;

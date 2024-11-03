@@ -15,13 +15,12 @@ const MiniGame = ({handleUpdate}: {handleUpdate: (value: number) => void}) => {
 
   const [monsterColor, setMonsterColor] = useState("red");
   const [monsterWidth, setMonsterWidth] = useState(30);
-  const [monsterHeight, setMonsterHeight] = useState(70);
   const [monsterOpacity, setMonsterOpacity] = useState(1);
 
   useEffect(() => {
     if (
       playerX + 45 >= monsterX &&
-      Math.abs(playerY - monsterY) < monsterHeight &&
+      Math.abs(playerY - monsterY) < 70 &&
       !hasCollided
     ) {
       setHasCollided(true);
@@ -53,7 +52,7 @@ const MiniGame = ({handleUpdate}: {handleUpdate: (value: number) => void}) => {
       // Draw monster
       context.fillStyle = monsterColor;
       context.globalAlpha = monsterOpacity;
-      context.fillRect(monsterX, monsterY, monsterWidth, monsterHeight); // Monster
+      context.fillRect(monsterX, monsterY, monsterWidth, 70); // Monster
       context.globalAlpha = 1;
     };
 
@@ -63,7 +62,7 @@ const MiniGame = ({handleUpdate}: {handleUpdate: (value: number) => void}) => {
     playerY,
     monsterColor,
     monsterWidth,
-    monsterHeight,
+
     monsterOpacity,
     monsterX,
     monsterY,
